@@ -179,7 +179,15 @@
       "taxes_included": "Taxes included.",
       "duties_included": "Duties included.",
       "duties_and_taxes_included": "Duties and taxes included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+      "soletta": {
+        "purchase_options": "Choose how you buy",
+        "one_time": "One-time purchase",
+        "save_percent": "Save {{ percent }}%",
+        "per_bottle": "{{ price }} per bottle",
+        "sold_out_note": "Out of stock right now. Subscribe when it is back to lock in the lower price.",
+        "no_plans": "No subscription plans are attached to this product yet. Add a selling plan in your subscription app, then this block will show it automatically."
+      }
     },
     "modal": {
       "label": "Media gallery"
@@ -274,7 +282,6 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
-
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
@@ -376,6 +383,10 @@
       "min_error": "This item has a minimum of {{ min }}",
       "max_error": "This item has a maximum of {{ max }}",
       "step_error": "You can only add this item in increments of {{ step }}"
+    },
+    "soletta": {
+      "pick_a_product": "Choose a product for this card in the theme editor.",
+      "no_products": "No products have been added to this section yet."
     }
   },
   "localization": {

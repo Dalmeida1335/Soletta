@@ -159,3 +159,68 @@
   .sol-products { gap: 24px; }
   .sol-banner { padding: 80px var(--sol-pad-x); }
 }
+
+/* ---- purchase options (subscribe vs one-time) ---- */
+.sol-po { border: 0; margin: 0 0 20px; padding: 0; display: flex; flex-direction: column; gap: 12px; font-family: var(--sol-sans); }
+.sol-po__legend { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--sol-blue); font-weight: 500; padding: 0; margin-bottom: 4px; }
+.sol-po__opt { position: relative; display: flex; align-items: flex-start; gap: 16px; padding: 20px 22px; border: 1px solid var(--sol-rule); border-radius: 14px; cursor: pointer; background: var(--sol-paper); transition: border-color .2s, box-shadow .2s, background .2s; }
+.sol-po__opt:hover { border-color: var(--sol-blue); }
+.sol-po__opt:has(.sol-po__radio:checked) { border-color: var(--sol-blue); box-shadow: inset 0 0 0 1px var(--sol-blue); background: var(--sol-mist); }
+.sol-po__opt:has(.sol-po__radio:focus-visible) { outline: 2px solid var(--sol-navy); outline-offset: 2px; }
+.sol-po__opt:has(.sol-po__radio:disabled) { opacity: .55; cursor: not-allowed; }
+
+.sol-po__radio { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+.sol-po__mark { flex: none; width: 20px; height: 20px; margin-top: 3px; border-radius: 50%; border: 1px solid var(--sol-blue); position: relative; transition: background .2s; }
+.sol-po__opt:has(.sol-po__radio:checked) .sol-po__mark { background: var(--sol-blue); }
+.sol-po__opt:has(.sol-po__radio:checked) .sol-po__mark::after { content: ''; position: absolute; inset: 5px; border-radius: 50%; background: var(--sol-paper); }
+
+.sol-po__content { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
+.sol-po__head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.sol-po__name { font-size: 16px; font-weight: 500; color: var(--sol-navy); }
+.sol-po__save { padding: 5px 12px; border-radius: 999px; background: var(--sol-lemon); color: var(--sol-navy); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; white-space: nowrap; }
+.sol-po__price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.sol-po__price strong { font-family: var(--sol-serif); font-weight: 400; font-size: 26px; color: var(--sol-navy); }
+.sol-po__unit { font-size: 14px; color: var(--sol-muted); }
+.sol-po__note { font-size: 14.5px; line-height: 1.6; color: var(--sol-body); margin: 0; text-wrap: pretty; }
+.sol-po__soldout { font-size: 14.5px; line-height: 1.6; color: var(--sol-body); margin: 4px 0 0; text-wrap: pretty; }
+.sol-po--empty { padding: 18px 22px; border: 1px dashed var(--sol-rule); border-radius: 14px; }
+
+/* while the section re-renders after a variant change */
+.sol-po.is-updating { opacity: .5; pointer-events: none; transition: opacity .15s; }
+
+/* Fallback for browsers without :has() support. The radio still works,
+   it just does not get the highlighted card treatment. */
+@supports not selector(:has(*)) {
+  .sol-po__radio { position: static; opacity: 1; width: 20px; height: 20px; margin-top: 3px; pointer-events: auto; }
+  .sol-po__mark { display: none; }
+}
+
+/* ---- tablet ---- */
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  :root { --sol-pad-x: 40px; }
+  .sol-trio, .sol-cols--3, .sol-cols--4, .sol-cols--5, .sol-products { grid-template-columns: repeat(2, 1fr); }
+  .sol-cols { gap: 1px; }
+  .sol-cols__cell { padding: 32px 24px; }
+  .sol-cols__cell:first-child, .sol-cols__cell:last-child { padding-left: 24px; padding-right: 24px; }
+  .sol-split__media { min-height: 440px; }
+  .sol-mediatext__media { height: 460px; }
+  .sol-banner { padding: 96px var(--sol-pad-x); }
+  .sol-products { gap: 24px; }
+}
+
+/* ---- small phones ---- */
+@media screen and (max-width: 480px) {
+  .sol-po__opt { padding: 16px 18px; gap: 12px; }
+  .sol-po__price strong { font-size: 23px; }
+  .sol-split__media { min-height: 280px; }
+  .sol-mediatext__media { height: 300px; }
+}
+
+/* placeholder art fills its slot while a merchant has not picked an image yet */
+.sol-placeholder { width: 100%; height: 100%; display: block; background: #DCE9F3; fill: rgba(18,56,92,.28); }
+.sol-split__media .sol-placeholder,
+.sol-product__media .sol-placeholder { position: absolute; inset: 0; }
+.sol-product__media { display: block; text-decoration: none; }
+.sol-product__form { margin-top: 20px; }
+.sol-product__form .sol-btn { border: 0; cursor: pointer; font-family: var(--sol-sans); width: 100%; text-align: center; }
+.sol-product__form .sol-btn[disabled] { opacity: .5; cursor: not-allowed; }

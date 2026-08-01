@@ -1,0 +1,61 @@
+<div class="soletta">
+  <div class="sol-wrap sol-wrap--read" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank -%}
+      <div class="sol-reveal" style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 48px;">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="sol-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="sol-h2">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="sol-faq sol-reveal">
+      {%- for block in section.blocks -%}
+        <details {{ block.shopify_attributes }}>
+          <summary>
+            <h3>{{ block.settings.question | escape }}</h3>
+            <span class="sol-faq__chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="sol-faq__answer">{{ block.settings.answer }}</div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Soletta FAQ",
+  "tag": "section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Questions" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Things people ask us" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Top padding", "default": 88 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Bottom padding", "default": 88 }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Question",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Can I skip or cancel a subscription?" },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Yes, any time. Skip a delivery, change how often it arrives, or cancel outright from your account. There is no fee and no phone call.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Soletta FAQ",
+      "blocks": [{ "type": "item" }, { "type": "item" }, { "type": "item" }]
+    }
+  ]
+}
+{% endschema %}

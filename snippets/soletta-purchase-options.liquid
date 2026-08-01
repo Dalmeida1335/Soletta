@@ -1,0 +1,155 @@
+{% comment %}
+  Renders the Soletta purchase options selector (subscription vs one-time).
+
+  Subscription is listed first and selected by default, since it is the
+  primary offer. Every price, discount and delivery interval below comes
+  from the product's real selling plan allocations, so nothing here needs
+  editing when pricing changes in Shopify.
+
+  Accepts:
+  - product: {Object} product object.
+  - product_form_id: {String} id of the product form these inputs submit with.
+  - block: {Object} block object (optional, for settings).
+
+  Usage:
+  {% render 'soletta-purchase-options', product: product, product_form_id: product_form_id, block: block %}
+{% endcomment %}
+
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+  assign allocations = variant.selling_plan_allocations
+  assign show_one_time = true
+  if variant.requires_selling_plan
+    assign show_one_time = false
+  endif
+
+  comment
+    Work out how many bottles are in this pack so we can show a real
+    per-bottle price. Prefer an explicit metafield, otherwise read a
+    leading number off the variant title ("12-pack" gives 12). If neither
+    resolves we simply omit the per-bottle line rather than guess.
+  endcomment
+  assign units = 0
+  if variant.metafields.custom.units_per_pack.value != blank
+    assign units = variant.metafields.custom.units_per_pack.value | plus: 0
+  else
+    comment
+      `plus: 0` coerces a numeric string and yields 0 for anything else,
+      so a title like "12-pack" gives 12 and "Default Title" gives 0.
+    endcomment
+    assign units = variant.title | split: '-' | first | strip | split: ' ' | first | plus: 0
+  endif
+-%}
+
+{%- if allocations.size > 0 -%}
+  <fieldset
+    class="sol-po"
+    data-sol-purchase-options
+    data-one-time-price="{{ variant.price }}"
+    {% unless variant.available %}
+      data-sold-out
+    {% endunless %}
+  >
+    <legend class="sol-po__legend">{{ 'products.product.soletta.purchase_options' | t }}</legend>
+
+    {%- for allocation in allocations -%}
+      {%- liquid
+        assign plan = allocation.selling_plan
+        assign saving = variant.price | minus: allocation.per_delivery_price
+        assign saving_percent = 0
+        if variant.price > 0 and saving > 0
+          assign saving_percent = saving | times: 100.0 | divided_by: variant.price | round
+        endif
+      -%}
+      <label
+        class="sol-po__opt sol-po__opt--sub"
+        for="SolPlan-{{ product_form_id }}-{{ plan.id }}"
+      >
+        <input
+          type="radio"
+          class="sol-po__radio"
+          id="SolPlan-{{ product_form_id }}-{{ plan.id }}"
+          name="selling_plan"
+          form="{{ product_form_id }}"
+          value="{{ plan.id }}"
+          data-price="{{ allocation.per_delivery_price }}"
+          data-price-money="{{ allocation.per_delivery_price | money }}"
+          {% if forloop.first %}
+            checked
+          {% endif %}
+          {% unless variant.available %}
+            disabled
+          {% endunless %}
+        >
+        <span class="sol-po__mark" aria-hidden="true"></span>
+        <span class="sol-po__content">
+          <span class="sol-po__head">
+            <span class="sol-po__name">{{ plan.name | escape }}</span>
+            {%- if saving_percent > 0 -%}
+              <span class="sol-po__save">
+                {{- 'products.product.soletta.save_percent' | t: percent: saving_percent -}}
+              </span>
+            {%- endif -%}
+          </span>
+          <span class="sol-po__price">
+            <strong>{{ allocation.per_delivery_price | money }}</strong>
+            {%- if units > 0 -%}
+              {%- assign per_unit = allocation.per_delivery_price | divided_by: units | money -%}
+              <span class="sol-po__unit">
+                {{- 'products.product.soletta.per_bottle' | t: price: per_unit -}}
+              </span>
+            {%- endif -%}
+          </span>
+          {%- if plan.description != blank -%}
+            <span class="sol-po__note">{{ plan.description | escape }}</span>
+          {%- endif -%}
+        </span>
+      </label>
+    {%- endfor -%}
+
+    {%- if show_one_time -%}
+      <label class="sol-po__opt" for="SolPlan-{{ product_form_id }}-once">
+        <input
+          type="radio"
+          class="sol-po__radio"
+          id="SolPlan-{{ product_form_id }}-once"
+          name="selling_plan"
+          form="{{ product_form_id }}"
+          value=""
+          data-price="{{ variant.price }}"
+          data-price-money="{{ variant.price | money }}"
+          {% unless variant.available %}
+            disabled
+          {% endunless %}
+        >
+        <span class="sol-po__mark" aria-hidden="true"></span>
+        <span class="sol-po__content">
+          <span class="sol-po__head">
+            <span class="sol-po__name">{{ 'products.product.soletta.one_time' | t }}</span>
+          </span>
+          <span class="sol-po__price">
+            <strong>{{ variant.price | money }}</strong>
+            {%- if units > 0 -%}
+              {%- assign per_unit = variant.price | divided_by: units | money -%}
+              <span class="sol-po__unit">
+                {{- 'products.product.soletta.per_bottle' | t: price: per_unit -}}
+              </span>
+            {%- endif -%}
+          </span>
+        </span>
+      </label>
+    {%- endif -%}
+
+    {%- unless variant.available -%}
+      <p class="sol-po__soldout">{{ 'products.product.soletta.sold_out_note' | t }}</p>
+    {%- endunless -%}
+  </fieldset>
+{%- elsif request.design_mode -%}
+  {% comment %}
+    No selling plans are attached to this variant yet. Customers see nothing,
+    but we tell the merchant why the block looks empty in the theme editor.
+  {% endcomment %}
+  <div class="sol-po sol-po--empty">
+    <p class="sol-po__note">{{ 'products.product.soletta.no_plans' | t }}</p>
+  </div>
+{%- endif -%}

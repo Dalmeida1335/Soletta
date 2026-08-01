@@ -1,0 +1,80 @@
+<div class="soletta">
+  <div class="sol-wrap" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank -%}
+      <div class="sol-reveal" style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 56px;">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="sol-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="sol-h2">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="sol-trio">
+      {%- for block in section.blocks -%}
+        <div class="sol-card sol-reveal" {{ block.shopify_attributes }}>
+          <div class="sol-card__media">
+            {%- if block.settings.image != blank -%}
+              <img
+                src="{{ block.settings.image | image_url: width: 800 }}"
+                srcset="
+                  {{ block.settings.image | image_url: width: 400 }} 400w,
+                  {{ block.settings.image | image_url: width: 800 }} 800w
+                "
+                sizes="(min-width: 990px) 30vw, (min-width: 750px) 45vw, 100vw"
+                alt="{{ block.settings.image.alt | escape }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+                loading="lazy"
+              >
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'sol-placeholder' }}
+            {%- endif -%}
+          </div>
+          {%- if block.settings.label != blank -%}
+            <p class="sol-num">{{ block.settings.label | escape }}</p>
+          {%- endif -%}
+          {%- if block.settings.heading != blank -%}
+            <h3>{{ block.settings.heading | escape }}</h3>
+          {%- endif -%}
+          {%- if block.settings.body != blank -%}
+            <div class="sol-small">{{ block.settings.body }}</div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Soletta trio",
+  "tag": "section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "What is inside" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Three ingredients, and that is the whole list." },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Top padding", "default": 96 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Bottom padding", "default": 96 }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "label", "label": "Small label", "default": "01" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Carbonated water" },
+        { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Bubbles and nothing else. No sweeteners, no flavourings, no colour.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Soletta trio",
+      "blocks": [{ "type": "card" }, { "type": "card" }, { "type": "card" }]
+    }
+  ]
+}
+{% endschema %}

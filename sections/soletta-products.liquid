@@ -1,0 +1,174 @@
+<div class="soletta">
+  <div class="sol-wrap" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank -%}
+      <div class="sol-reveal" style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 56px;">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="sol-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="sol-h2">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="sol-products">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign product = block.settings.product
+          assign variant = product.selected_or_first_available_variant
+
+          comment
+            Prefer the subscription price when the merchant has asked this card
+            to lead with it and the variant actually has a selling plan.
+          endcomment
+          assign has_allocation = false
+          if block.settings.show_subscription and variant.selling_plan_allocations.size > 0
+            assign has_allocation = true
+            assign allocation = variant.selling_plan_allocations.first
+          endif
+
+          assign display_price = variant.price
+          if has_allocation
+            assign display_price = allocation.per_delivery_price
+          endif
+
+          assign units = 0
+          if variant.metafields.custom.units_per_pack.value != blank
+            assign units = variant.metafields.custom.units_per_pack.value | plus: 0
+          else
+            assign units = variant.title | split: '-' | first | strip | split: ' ' | first | plus: 0
+          endif
+        -%}
+
+        <div
+          class="sol-product sol-reveal{% if block.settings.show_subscription %} sol-product--feature{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          {%- if product == blank -%}
+            {% comment %} Nothing chosen yet. Keep the slot visible while editing. {% endcomment %}
+            <div class="sol-product__media">
+              {{ 'product-1' | placeholder_svg_tag: 'sol-placeholder' }}
+            </div>
+            <div class="sol-product__body">
+              <h3>{{ 'onboarding.product_title' | t }}</h3>
+              <p class="sol-small">
+                {{- 'sections.soletta.pick_a_product' | t -}}
+              </p>
+            </div>
+          {%- else -%}
+            <a href="{{ product.url }}" class="sol-product__media" aria-label="{{ product.title | escape }}">
+              {%- if product.featured_image != blank -%}
+                <img
+                  src="{{ product.featured_image | image_url: width: 900 }}"
+                  srcset="
+                    {{ product.featured_image | image_url: width: 450 }} 450w,
+                    {{ product.featured_image | image_url: width: 900 }} 900w
+                  "
+                  sizes="(min-width: 990px) 45vw, 100vw"
+                  alt="{{ product.featured_image.alt | escape }}"
+                  width="{{ product.featured_image.width }}"
+                  height="{{ product.featured_image.height }}"
+                  loading="lazy"
+                >
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag: 'sol-placeholder' }}
+              {%- endif -%}
+
+              {%- if block.settings.badge != blank and variant.available -%}
+                <span class="sol-product__badge">{{ block.settings.badge | escape }}</span>
+              {%- elsif variant.available == false -%}
+                <span class="sol-product__badge">{{ 'products.product.sold_out' | t }}</span>
+              {%- endif -%}
+            </a>
+
+            <div class="sol-product__body">
+              <h3>{{ product.title | escape }}</h3>
+
+              {%- if block.settings.body != blank -%}
+                <div class="sol-small">{{ block.settings.body }}</div>
+              {%- endif -%}
+
+              <div class="sol-product__price">
+                <strong>{{ display_price | money }}</strong>
+                {%- if units > 0 -%}
+                  {%- assign per_unit = display_price | divided_by: units | money -%}
+                  <span>{{ 'products.product.soletta.per_bottle' | t: price: per_unit }}</span>
+                {%- endif -%}
+              </div>
+
+              {%- if has_allocation -%}
+                <p class="sol-small">{{ allocation.selling_plan.name | escape }}</p>
+              {%- endif -%}
+
+              {%- assign card_form_id = 'SolProductForm-' | append: section.id | append: '-' | append: block.id -%}
+              {%- form 'product', product, id: card_form_id, class: 'sol-product__form' -%}
+                <input type="hidden" name="id" value="{{ variant.id }}">
+                {%- if has_allocation -%}
+                  <input type="hidden" name="selling_plan" value="{{ allocation.selling_plan.id }}">
+                {%- endif -%}
+                <button
+                  type="submit"
+                  name="add"
+                  class="sol-btn {% if block.settings.show_subscription %}sol-btn--navy{% else %}sol-btn--blue{% endif %}"
+                  {% unless variant.available %}
+                    disabled
+                  {% endunless %}
+                >
+                  {%- if variant.available -%}
+                    {{ block.settings.button_label | default: 'Add to cart' | escape }}
+                  {%- else -%}
+                    {{ 'products.product.sold_out' | t }}
+                  {%- endif -%}
+                </button>
+              {%- endform -%}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- else -%}
+        <p class="sol-body">{{ 'sections.soletta.no_products' | t }}</p>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Soletta products",
+  "tag": "section",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Buy" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Subscribe and pay less per bottle." },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Top padding", "default": 96 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Bottom padding", "default": 96 }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        { "type": "product", "id": "product", "label": "Product" },
+        {
+          "type": "checkbox",
+          "id": "show_subscription",
+          "label": "Lead with the subscription price",
+          "info": "Shows this product's subscription price and adds it to the cart on a subscription. Needs a selling plan on the product.",
+          "default": false
+        },
+        { "type": "text", "id": "badge", "label": "Badge", "info": "Leave empty for no badge." },
+        { "type": "richtext", "id": "body", "label": "Body" },
+        { "type": "text", "id": "button_label", "label": "Button label", "default": "Add to cart" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Soletta products",
+      "blocks": [
+        { "type": "product", "settings": { "show_subscription": true, "badge": "Best value" } },
+        { "type": "product" }
+      ]
+    }
+  ]
+}
+{% endschema %}

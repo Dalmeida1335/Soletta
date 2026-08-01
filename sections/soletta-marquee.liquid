@@ -1,0 +1,40 @@
+{%- liquid
+  assign items = section.settings.items | split: ','
+-%}
+
+{%- if items.size > 0 -%}
+  <div class="soletta">
+    <div class="sol-marquee">
+      {% comment %}
+        One track holding the list twice. The -50% keyframe then travels
+        exactly one copy's width, so the loop is seamless. The second copy
+        is hidden from screen readers to avoid a duplicate reading.
+      {% endcomment %}
+      <div class="sol-marquee__track">
+        {%- for item in items -%}
+          <span>{{ item | strip | escape }}</span>
+        {%- endfor -%}
+        {%- for item in items -%}
+          <span aria-hidden="true">{{ item | strip | escape }}</span>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Soletta marquee",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "items",
+      "label": "Items",
+      "info": "Separate each item with a comma.",
+      "default": "Natural Electrolytes, Three Ingredients, No Sweeteners, Made in Sicily, Zero Sugar"
+    }
+  ],
+  "presets": [{ "name": "Soletta marquee" }]
+}
+{% endschema %}

@@ -491,6 +491,12 @@
                     block: block,
                     product_form_id: product_form_id
                   %}
+                {%- when 'purchase_options' -%}
+                  {%- render 'soletta-purchase-options',
+                    product: product,
+                    product_form_id: product_form_id,
+                    block: block
+                  -%}
                 {%- when 'buy_buttons' -%}
                   {%- render 'buy-buttons',
                     block: block,
@@ -919,6 +925,17 @@
             }
           ],
           "default": "circle"
+        }
+      ]
+    },
+    {
+      "type": "purchase_options",
+      "name": "Purchase options (subscribe or one-time)",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Shows the subscription and one-time options for this product, with subscription selected by default. Prices come from the selling plans attached to the product, so there is nothing to configure here. Place this block above the buy buttons."
         }
       ]
     },

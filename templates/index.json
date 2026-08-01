@@ -1,75 +1,158 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "soletta-hero",
+      "settings": {
+        "eyebrow": "Seltz limone e sale",
+        "heading": "Three ingredients. Nothing else.",
+        "body": "<p>Carbonated water, real lemon juice, sea salt. A Sicilian street drink, made the way it has always been made.</p>",
+        "button_label": "Shop Soletta",
+        "button_link": "shopify://collections/all",
+        "link_label": "Our story"
+      }
+    },
+    "marquee": {
+      "type": "soletta-marquee",
+      "settings": {
+        "items": "Natural Electrolytes, Three Ingredients, No Sweeteners, Made in Sicily, Zero Sugar"
+      }
+    },
+    "trio": {
+      "type": "soletta-trio",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "water": {
+          "type": "card",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "label": "01",
+            "heading": "Carbonated water",
+            "body": "<p>Bubbles and nothing else. No sweeteners, no flavourings, no colour.</p>"
           }
         },
-        "button": {
-          "type": "buttons",
+        "lemon": {
+          "type": "card",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "label": "02",
+            "heading": "Real lemon juice",
+            "body": "<p>Pressed lemon, not concentrate and not lemon flavour. It tastes sharp because it is.</p>"
+          }
+        },
+        "salt": {
+          "type": "card",
+          "settings": {
+            "label": "03",
+            "heading": "Sea salt",
+            "body": "<p>A small amount, which is where the Natural Electrolytes come from. It rounds the sourness out.</p>"
           }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+      "block_order": ["water", "lemon", "salt"],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "eyebrow": "What is inside",
+        "heading": "Three ingredients, and that is the whole list.",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "story": {
+      "type": "soletta-chapter",
+      "blocks": {
+        "palermo": {
+          "type": "chapter",
+          "settings": {
+            "label": "Palermo",
+            "heading": "A drink sold on the street",
+            "body": "<p>In Palermo, traveling vendors sold seltz limone e sale from carts on the corner. Lemon squeezed to order, a pinch of sea salt, water charged with gas. You drank it standing up, in the heat, and kept moving.</p>"
+          }
+        },
+        "today": {
+          "type": "chapter",
+          "settings": {
+            "label": "Today",
+            "heading": "The same drink, in a bottle",
+            "body": "<p>We did not improve the recipe, because it did not need improving. We put it in a bottle so you can keep it cold at home. Same three ingredients, same sharp finish.</p>"
+          }
+        }
+      },
+      "block_order": ["palermo", "today"],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "dark": false,
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "products": {
+      "type": "soletta-products",
+      "blocks": {
+        "subscription": {
+          "type": "product",
+          "settings": {
+            "show_subscription": true,
+            "badge": "Best value",
+            "body": "<p>Arrives on a schedule you set. Skip or cancel whenever you want.</p>",
+            "button_label": "Subscribe"
+          }
+        },
+        "onetime": {
+          "type": "product",
+          "settings": {
+            "show_subscription": false,
+            "body": "<p>A one-time order, no commitment.</p>",
+            "button_label": "Add to cart"
+          }
+        }
+      },
+      "block_order": ["subscription", "onetime"],
+      "settings": {
+        "eyebrow": "Buy",
+        "heading": "Subscribe and pay less per bottle.",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "faq": {
+      "type": "soletta-faq",
+      "blocks": {
+        "cancel": {
+          "type": "item",
+          "settings": {
+            "question": "Can I skip or cancel a subscription?",
+            "answer": "<p>Yes, any time. Skip a delivery, change how often it arrives, or cancel outright from your account. There is no fee and no phone call.</p>"
+          }
+        },
+        "sugar": {
+          "type": "item",
+          "settings": {
+            "question": "Is there any sugar in it?",
+            "answer": "<p>None. There is no sugar, no sweetener and no artificial flavour. The only things in the bottle are carbonated water, lemon juice and sea salt.</p>"
+          }
+        },
+        "electrolytes": {
+          "type": "item",
+          "settings": {
+            "question": "What makes it an electrolyte drink?",
+            "answer": "<p>The sea salt. It puts sodium back in, which is what you lose when you sweat. That is why the salt is in the recipe rather than being left out.</p>"
+          }
+        }
+      },
+      "block_order": ["cancel", "sugar", "electrolytes"],
+      "settings": {
+        "eyebrow": "Questions",
+        "heading": "Things people ask us",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "banner": {
+      "type": "soletta-banner",
+      "settings": {
+        "overlay_opacity": 45,
+        "eyebrow": "Natural Electrolytes",
+        "heading": "Salt, lemon, water. It works because it is simple.",
+        "body": "<p>Subscribe and it arrives before you run out.</p>",
+        "button_label": "Start a subscription",
+        "button_link": "shopify://collections/all"
       }
     }
   },
-  "order": [
-    "image_banner",
-    "featured_collection"
-  ]
+  "order": ["hero", "marquee", "trio", "story", "products", "faq", "banner"]
 }

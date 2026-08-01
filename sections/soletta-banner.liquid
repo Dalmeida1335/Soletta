@@ -1,0 +1,59 @@
+<div class="soletta">
+  <div class="sol-banner{% unless section.settings.image %} sol-dark{% endunless %}">
+    {%- if section.settings.image != blank -%}
+      <img
+        class="sol-banner__bg"
+        src="{{ section.settings.image | image_url: width: 2000 }}"
+        srcset="
+          {{ section.settings.image | image_url: width: 800 }} 800w,
+          {{ section.settings.image | image_url: width: 1400 }} 1400w,
+          {{ section.settings.image | image_url: width: 2000 }} 2000w
+        "
+        sizes="100vw"
+        alt="{{ section.settings.image.alt | escape }}"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+        loading="lazy"
+      >
+      {% comment %} Scrim so the copy stays readable over any photograph. {% endcomment %}
+      <span
+        aria-hidden="true"
+        style="position: absolute; inset: 0; background: rgba(18,56,92,{{ section.settings.overlay_opacity | divided_by: 100.0 }});"
+      ></span>
+    {%- endif -%}
+
+    <div class="sol-banner__inner sol-reveal">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="sol-eyebrow sol-eyebrow--light">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="sol-h2" style="color: var(--sol-paper);">{{ section.settings.heading | escape }}</h2>
+      {%- endif -%}
+      {%- if section.settings.body != blank -%}
+        <div class="sol-lead" style="color: rgba(251,248,241,.86);">{{ section.settings.body }}</div>
+      {%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <a href="{{ section.settings.button_link | default: '#' }}" class="sol-btn sol-btn--lemon">
+          {{- section.settings.button_label | escape -}}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Soletta banner",
+  "tag": "section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Background image" },
+    { "type": "range", "id": "overlay_opacity", "min": 0, "max": 90, "step": 5, "unit": "%", "label": "Image overlay", "default": 45 },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Natural Electrolytes" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Salt, lemon, water. It works because it is simple." },
+    { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Subscribe and it arrives before you run out.</p>" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Start a subscription" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "presets": [{ "name": "Soletta banner" }]
+}
+{% endschema %}

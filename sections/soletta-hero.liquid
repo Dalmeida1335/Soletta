@@ -1,0 +1,84 @@
+<div class="soletta">
+  <div class="sol-split">
+    <div class="sol-split__text sol-reveal">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="sol-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h1 class="sol-h1">{{ section.settings.heading | escape }}</h1>
+      {%- endif -%}
+
+      {%- if section.settings.body != blank -%}
+        <div class="sol-lead">{{ section.settings.body }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.button_label != blank or section.settings.link_label != blank -%}
+        <div class="sol-hero-actions">
+          {%- if section.settings.button_label != blank -%}
+            <a
+              href="{{ section.settings.button_link | default: '#' }}"
+              class="sol-btn sol-btn--navy"
+            >
+              {{- section.settings.button_label | escape -}}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.link_label != blank -%}
+            <a href="{{ section.settings.link_url | default: '#' }}" class="sol-link">
+              {{- section.settings.link_label | escape -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="sol-split__media">
+      {%- if section.settings.image != blank -%}
+        <img
+          src="{{ section.settings.image | image_url: width: 1600 }}"
+          srcset="
+            {{ section.settings.image | image_url: width: 600 }} 600w,
+            {{ section.settings.image | image_url: width: 1000 }} 1000w,
+            {{ section.settings.image | image_url: width: 1600 }} 1600w
+          "
+          sizes="(min-width: 990px) 48vw, 100vw"
+          alt="{{ section.settings.image.alt | escape }}"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          loading="eager"
+          fetchpriority="high"
+        >
+      {%- else -%}
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'sol-placeholder' }}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Soletta hero",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Seltz limone e sale" },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Three ingredients. Nothing else."
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>Carbonated water, real lemon juice, sea salt. A Sicilian street drink, made the way it has always been made.</p>"
+    },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop Soletta" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "text", "id": "link_label", "label": "Secondary link label", "default": "Our story" },
+    { "type": "url", "id": "link_url", "label": "Secondary link URL" }
+  ],
+  "presets": [{ "name": "Soletta hero" }]
+}
+{% endschema %}
