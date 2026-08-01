@@ -15,7 +15,7 @@
         "eyebrow": "Sicilian inspired Seltz",
         "heading": "Sicily, in a glass.",
         "body": "<p>Carbonated water.  Real lemon juice. A pinch of sea salt. A Sicilian street drink, made the way it has always been made since 1896.</p>",
-        "image": "shopify://shop_images/catania-sicily-travel-4900515.jpg",
+        "image": "shopify://shop_images/Catania.jpg",
         "button_label": "Shop Soletta",
         "button_link": "shopify://collections/all",
         "link_label": "Our story",
@@ -71,34 +71,18 @@
         "padding_bottom": 96
       }
     },
-    "story": {
-      "type": "soletta-chapter",
-      "blocks": {
-        "palermo": {
-          "type": "chapter",
-          "settings": {
-            "label": "Palermo",
-            "heading": "A drink sold on the street",
-            "body": "<p>In Palermo, traveling vendors sold seltz limone e sale from carts on the corner. Lemon squeezed to order, a pinch of sea salt, water charged with gas. You drank it standing up, in the heat, and kept moving.</p>"
-          }
-        },
-        "today": {
-          "type": "chapter",
-          "settings": {
-            "label": "Today",
-            "heading": "The same drink, in a bottle",
-            "body": "<p>We did not improve the recipe, because it did not need improving. We put it in a bottle so you can keep it cold at home. Same three ingredients, same sharp finish.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "palermo",
-        "today"
-      ],
+    "soletta_hero_W8z8Nm": {
+      "type": "soletta-hero",
+      "name": "Our Story",
       "settings": {
-        "dark": false,
-        "padding_top": 88,
-        "padding_bottom": 88
+        "eyebrow": "Catania, Sicily",
+        "heading": "A Reciple Older than the Soda Aisle",
+        "body": "<p>Back in 1896, in the seaside city of Catania, Sicily, someone started mixing carbonated water with lemon and salt, and it caught on. Sold from kiosks along the water, sipped by locals and tourists who wanted to cool off. We didn't reinvent it. We just brought it home.<br/><br/></p>",
+        "image": "shopify://shop_images/Catania_Kiosk.webp",
+        "button_label": "Shop Soletta",
+        "button_link": "shopify://collections/all",
+        "link_label": "Our story",
+        "link_url": ""
       }
     },
     "products": {
@@ -189,7 +173,7 @@
     "hero",
     "marquee",
     "trio",
-    "story",
+    "soletta_hero_W8z8Nm",
     "products",
     "faq",
     "banner"
