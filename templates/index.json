@@ -1,20 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "soletta-hero",
       "settings": {
-        "eyebrow": "Seltz limone e sale",
-        "heading": "Three ingredients. Nothing else.",
-        "body": "<p>Carbonated water, real lemon juice, sea salt. A Sicilian street drink, made the way it has always been made.</p>",
+        "eyebrow": "Sicilian inspired Seltz",
+        "heading": "Sicily, in a glass.",
+        "body": "<p>Carbonated water.  Real lemon juice. A pinch of sea salt. A Sicilian street drink, made the way it has always been made since 1896.</p>",
+        "image": "shopify://shop_images/catania-sicily-travel-4900515.jpg",
         "button_label": "Shop Soletta",
         "button_link": "shopify://collections/all",
-        "link_label": "Our story"
+        "link_label": "Our story",
+        "link_url": ""
       }
     },
     "marquee": {
       "type": "soletta-marquee",
       "settings": {
-        "items": "Natural Electrolytes, Three Ingredients, No Sweeteners, Made in Sicily, Zero Sugar"
+        "items": "Natural Electrolytes, Nothing FAKE, Carbonated Water, REAL Lemon Juice, Sicilian Sea Salt"
       }
     },
     "trio": {
@@ -23,14 +34,16 @@
         "water": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/Spring_Water_480x480_8f3ae0b2-6bba-439d-a222-ddcdbe0f54e7.webp",
             "label": "01",
             "heading": "Carbonated water",
-            "body": "<p>Bubbles and nothing else. No sweeteners, no flavourings, no colour.</p>"
+            "body": "<p>A clean, lightly effervescent Base. No sweeteners, no \"natural\" flavourings, no colour.</p>"
           }
         },
         "lemon": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/secrets-of-the-amalfi-coast-lemon-grove-walk-1725758431.jpg",
             "label": "02",
             "heading": "Real lemon juice",
             "body": "<p>Pressed lemon, not concentrate and not lemon flavour. It tastes sharp because it is.</p>"
@@ -39,13 +52,18 @@
         "salt": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/99_saltpans-marsala.webp",
             "label": "03",
             "heading": "Sea salt",
             "body": "<p>A small amount, which is where the Natural Electrolytes come from. It rounds the sourness out.</p>"
           }
         }
       },
-      "block_order": ["water", "lemon", "salt"],
+      "block_order": [
+        "water",
+        "lemon",
+        "salt"
+      ],
       "settings": {
         "eyebrow": "What is inside",
         "heading": "Three ingredients, and that is the whole list.",
@@ -73,7 +91,10 @@
           }
         }
       },
-      "block_order": ["palermo", "today"],
+      "block_order": [
+        "palermo",
+        "today"
+      ],
       "settings": {
         "dark": false,
         "padding_top": 88,
@@ -86,6 +107,7 @@
         "subscription": {
           "type": "product",
           "settings": {
+            "product": "",
             "show_subscription": true,
             "badge": "Best value",
             "body": "<p>Arrives on a schedule you set. Skip or cancel whenever you want.</p>",
@@ -95,13 +117,18 @@
         "onetime": {
           "type": "product",
           "settings": {
+            "product": "",
             "show_subscription": false,
+            "badge": "",
             "body": "<p>A one-time order, no commitment.</p>",
             "button_label": "Add to cart"
           }
         }
       },
-      "block_order": ["subscription", "onetime"],
+      "block_order": [
+        "subscription",
+        "onetime"
+      ],
       "settings": {
         "eyebrow": "Buy",
         "heading": "Subscribe and pay less per bottle.",
@@ -134,7 +161,11 @@
           }
         }
       },
-      "block_order": ["cancel", "sugar", "electrolytes"],
+      "block_order": [
+        "cancel",
+        "sugar",
+        "electrolytes"
+      ],
       "settings": {
         "eyebrow": "Questions",
         "heading": "Things people ask us",
@@ -154,5 +185,13 @@
       }
     }
   },
-  "order": ["hero", "marquee", "trio", "story", "products", "faq", "banner"]
+  "order": [
+    "hero",
+    "marquee",
+    "trio",
+    "story",
+    "products",
+    "faq",
+    "banner"
+  ]
 }
