@@ -9,6 +9,18 @@
  */
 {
   "sections": {
+    "soletta_banner_TnJGmw": {
+      "type": "soletta-banner",
+      "name": "Soletta banner",
+      "settings": {
+        "overlay_opacity": 45,
+        "eyebrow": "Get in touch",
+        "heading": "Customer Support, Retail + Wholesale Inquiries, Press + Partnership",
+        "body": "",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -28,6 +40,7 @@
     }
   },
   "order": [
+    "soletta_banner_TnJGmw",
     "main",
     "form"
   ]
