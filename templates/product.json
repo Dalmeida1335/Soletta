@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -45,10 +54,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "purchase_options": {
-          "type": "purchase_options",
-          "settings": {}
         }
       },
       "block_order": [
@@ -56,7 +61,6 @@
         "title",
         "price",
         "variant_picker",
-        "purchase_options",
         "quantity_selector",
         "buy_buttons",
         "description",
@@ -78,9 +82,111 @@
         "padding_bottom": 12
       }
     },
+    "multicolumn_agYq4K": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LPXg84": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>The Reset</strong>",
+            "text": "<p>A crisp, clean pour for the middle of the afternoon. The drink you reach for instead of another coffee.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TaerHR": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>The Mixer</strong>",
+            "text": "<p>Sicilian bars have poured this alongside gin, vodka, and aperitivo for generations. Your home bar could use the same move.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DxrzRa": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>The Gathering </strong>",
+            "text": "<p>Glass bottle, real ingredients, nothing to apologize for on the table. It holds its own next to whatever else you're serving.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_LPXg84",
+        "column_TaerHR",
+        "column_DxrzRa"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>In Sicily, this drink has no wrong hour.</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "soletta_chapter_zxr3eG": {
+      "type": "soletta-chapter",
+      "blocks": {
+        "chapter_qABcak": {
+          "type": "chapter",
+          "settings": {
+            "label": "Palermo",
+            "heading": "A drink sold on the street",
+            "body": "<p>In Palermo, traveling vendors sold seltz limone e sale from carts on the corner. Lemon squeezed to order, a pinch of sea salt, water charged with gas. You drank it standing up, in the heat, and kept moving.</p>"
+          }
+        },
+        "chapter_gdtkHB": {
+          "type": "chapter",
+          "settings": {
+            "label": "Palermo",
+            "heading": "A drink sold on the street",
+            "body": "<p>In Palermo, traveling vendors sold seltz limone e sale from carts on the corner. Lemon squeezed to order, a pinch of sea salt, water charged with gas. You drank it standing up, in the heat, and kept moving.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "chapter_qABcak",
+        "chapter_gdtkHB"
+      ],
+      "disabled": true,
+      "name": "Soletta story",
+      "settings": {
+        "dark": false,
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "soletta_banner_Tx9VGU": {
+      "type": "soletta-banner",
+      "name": "Soletta banner",
+      "settings": {
+        "overlay_opacity": 45,
+        "eyebrow": "Soletta Sicilian inspired seltz",
+        "heading": "Never Run Out",
+        "body": "<p>Subscribe and it arrives before you run out.</p>",
+        "button_label": "Start a subscription",
+        "button_link": ""
+      }
+    },
     "disclosures": {
       "type": "disclosures",
       "settings": {
+        "heading": "Disclosures",
+        "heading_size": "h2",
+        "open_by_default": false,
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 0
       }
@@ -106,6 +212,9 @@
   },
   "order": [
     "main",
+    "multicolumn_agYq4K",
+    "soletta_chapter_zxr3eG",
+    "soletta_banner_Tx9VGU",
     "disclosures",
     "related-products"
   ]
