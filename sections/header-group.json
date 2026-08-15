@@ -54,22 +54,56 @@
         "padding_bottom": 0
       }
     },
-    "soletta_banner_KypfkB": {
-      "type": "soletta-banner",
-      "name": "Soletta banner",
+    "soletta_faq_rmtxNw": {
+      "type": "soletta-faq",
+      "blocks": {
+        "item_TGjJMe": {
+          "type": "item",
+          "settings": {
+            "question": "Why glass vs aluminum?",
+            "answer": "<p>Glass is an inert material and therefore delivers the cleanest drinking experience possible. </p>"
+          }
+        },
+        "item_ppcVPt": {
+          "type": "item",
+          "settings": {
+            "question": "What is Soletta, exactly?",
+            "answer": "<p>It's a sparkling seltz inspired by seltz limone e sale — carbonated water, lemon juice, and sea salt — served from kiosks in Catania, Sicily since 1896. Not a soda. Not a flavored water. Not really an electrolyte drink in the sports-supplement sense either. It's closer to a very old, very simple recipe than anything new.</p>"
+          }
+        },
+        "item_pD7Lyd": {
+          "type": "item",
+          "settings": {
+            "question": "What's actually in it?",
+            "answer": "<p>At Soletta we believe in ingredient transparency and not hiding behind \"natural flavors\" like other brands.  Our reciple is simple: Carbonated Water, Organic Lemon Juice, Sicilian Sea Salt, Lemon Extract (to capture the oils in the rind) and citric acid.</p>"
+          }
+        },
+        "item_zcnXdJ": {
+          "type": "item",
+          "settings": {
+            "question": "Is there caffeine or alcohol in Soletta?",
+            "answer": "<p>Nope, neither.  But it does make for a great mixer to really amplify your cocktails. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_TGjJMe",
+        "item_ppcVPt",
+        "item_pD7Lyd",
+        "item_zcnXdJ"
+      ],
+      "name": "Soletta FAQ",
       "settings": {
-        "overlay_opacity": 45,
-        "eyebrow": "Soletta Sicilian Seltz",
-        "heading": "Contact Us",
-        "body": "<p>Wholesale Inquiries, Need Assistance, or Just Want to Say Hello?</p>",
-        "button_label": "Start a subscription",
-        "button_link": ""
+        "eyebrow": "Questions",
+        "heading": "Things people ask us",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "soletta_banner_KypfkB"
+    "soletta_faq_rmtxNw"
   ]
 }
