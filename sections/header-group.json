@@ -54,6 +54,18 @@
         "padding_bottom": 0
       }
     },
+    "soletta_banner_HVnWgC": {
+      "type": "soletta-banner",
+      "name": "Soletta banner",
+      "settings": {
+        "overlay_opacity": 45,
+        "eyebrow": "Natural Electrolytes",
+        "heading": "FAQs",
+        "body": "",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
     "soletta_faq_rmtxNw": {
       "type": "soletta-faq",
       "blocks": {
@@ -104,6 +116,7 @@
   "order": [
     "announcement-bar",
     "header",
+    "soletta_banner_HVnWgC",
     "soletta_faq_rmtxNw"
   ]
 }

@@ -9,105 +9,16 @@
  */
 {
   "sections": {
-    "soletta_banner_qBG7r4": {
-      "type": "soletta-banner",
-      "name": "Soletta banner",
-      "settings": {
-        "image": "shopify://shop_images/Guide-to-Taormina-Sicily_5.webp",
-        "overlay_opacity": 80,
-        "eyebrow": "Our story",
-        "heading": "The Kiosks of Catania",
-        "body": "<p>Seltz Limone e Sale -  A tradition dating back to 1896</p>",
-        "button_label": "Start a subscription",
-        "button_link": ""
-      }
-    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
-    },
-    "multirow_aHwiBP": {
-      "type": "multirow",
-      "blocks": {
-        "row_ApYcK7": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Catania_Kiosk.webp",
-            "caption": "Catania Kiosks",
-            "heading": "A drink that once stopped the city's foot traffic",
-            "text": "<p>Catania's kiosks (designed in ornate Liberty style, Italy's version of Art Nouveau) became such a fixture of daily life that, in the early 1900s, the city actually passed a law to move them out of the busiest piazzas. Not because anyone had a problem with the drink. Too many people were stopping to hang around, talk, and drink, and the crowds kept snarling traffic.</p><p>That's the tradition behind Soletta. Not something invented for a pitch deck, but a drink that once genuinely stopped a city's foot traffic.</p>",
-            "button_label": "SHOP",
-            "button_link": "shopify://collections/all"
-          }
-        }
-      },
-      "block_order": [
-        "row_ApYcK7"
-      ],
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_VBWFgb": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_XrDrGe": {
-          "type": "heading",
-          "settings": {
-            "heading": "Seltz Limone e Sale TODAY",
-            "heading_size": "h1"
-          }
-        },
-        "text_QyAyjp": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The classic version is prepared almost like a small performance. Carbonated water charged fresh from a hermetic siphon, poured over real, locally squeezed lemon juice, then finished with a pinch of salt stirred in with a long cocktail spoon, right there in front of you at the counter. It is usually served in a plain paper cup, meant to be drunk fast, standing up, mid-conversation with whoever poured it.</p><p>Locally, people valued the lemon and salt for more than the taste. The sodium and potassium were considered a natural way to stay refreshed through Sicily's hottest stretches. That's basically the same reasoning behind the natural electrolytes in every bottle of Soletta today. We didn't add anything special to make that true. It's just what real lemon and sea salt have always given you.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_XrDrGe",
-        "text_QyAyjp"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Seltz-sale-e-limone.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
-    "soletta_banner_qBG7r4",
-    "main",
-    "multirow_aHwiBP",
-    "image_with_text_VBWFgb"
+    "main"
   ]
 }
