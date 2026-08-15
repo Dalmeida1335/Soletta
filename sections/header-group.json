@@ -53,10 +53,23 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "soletta_banner_KypfkB": {
+      "type": "soletta-banner",
+      "name": "Soletta banner",
+      "settings": {
+        "overlay_opacity": 45,
+        "eyebrow": "Soletta Sicilian Seltz",
+        "heading": "Contact Us",
+        "body": "<p>Wholesale Inquiries, Need Assistance, or Just Want to Say Hello?</p>",
+        "button_label": "Start a subscription",
+        "button_link": ""
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "soletta_banner_KypfkB"
   ]
 }

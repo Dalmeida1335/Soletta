@@ -94,7 +94,7 @@
             "product": "soletta-12-pack",
             "show_subscription": true,
             "badge": "Best value",
-            "body": "<p>Arrives on a schedule you set. Skip or cancel whenever you want.</p>",
+            "body": "",
             "button_label": "Subscribe"
           }
         },
@@ -104,7 +104,7 @@
             "product": "soletta-24-pack-subscription",
             "show_subscription": false,
             "badge": "",
-            "body": "<p>A one-time order, no commitment.</p>",
+            "body": "<p>Subscribe and Save!</p>",
             "button_label": "Add to cart"
           }
         }
