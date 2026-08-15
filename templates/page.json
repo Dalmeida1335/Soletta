@@ -21,10 +21,10 @@
       "type": "soletta-banner",
       "name": "Soletta banner",
       "settings": {
-        "image": "shopify://shop_images/Catania_Kiosk.webp",
+        "image": "shopify://shop_images/Grotta-Palazzese-Dining-Terrace-1024x767.jpg",
         "overlay_opacity": 90,
-        "eyebrow": "OUR STORY",
-        "heading": "A RECIPE OLDER THAN THE SODA AISLE",
+        "eyebrow": "frequently asked questions",
+        "heading": "Wholesale Inquiries, Customer Feedback, or Just Want to Chat?",
         "body": "",
         "button_label": "Start a subscription",
         "button_link": ""
