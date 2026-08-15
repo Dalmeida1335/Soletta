@@ -16,9 +16,127 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "soletta_banner_acdgCQ": {
+      "type": "soletta-banner",
+      "name": "Soletta banner",
+      "settings": {
+        "image": "shopify://shop_images/Catania_Kiosk.webp",
+        "overlay_opacity": 90,
+        "eyebrow": "OUR STORY",
+        "heading": "A RECIPE OLDER THAN THE SODA AISLE",
+        "body": "",
+        "button_label": "Start a subscription",
+        "button_link": ""
+      }
+    },
+    "image_with_text_nCEXVq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zrne3A": {
+          "type": "heading",
+          "settings": {
+            "heading": "KIOSKS OF CATANIA",
+            "heading_size": "h1"
+          }
+        },
+        "text_nNCnfn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Long before sparkling water came in a can with a fruit drawn on it, it came from a kiosk on the Catania waterfront. A simple stand, a bottle of carbonated water, a wedge of lemon, a pinch of sea salt stirred in by hand. It's called<em>seltz limone e sale</em>, and in Sicily it's less a beverage category than a memory. The drink you had after the beach. The one your grandfather ordered without needing to ask. The taste that means summer's officially here.<br/><br/></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zrne3A",
+        "text_nNCnfn"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Catania_Kiosk.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "soletta_hero_xkjCkG": {
+      "type": "soletta-hero",
+      "name": "Soletta hero",
+      "settings": {
+        "eyebrow": "",
+        "heading": "The Ritual then and Now",
+        "body": "<p>The classic version is prepared almost like a small performance. Carbonated water charged fresh from a hermetic siphon, poured over real, locally squeezed lemon juice, then finished with a pinch of salt stirred in with a long cocktail spoon, right there in front of you at the counter. It was usually served in a plain paper cup, meant to be drunk fast, standing up, mid-conversation with whoever poured it.</p><p>Locally, people valued the lemon and salt for more than the taste. The sodium and potassium were considered a natural way to stay refreshed through Sicily's hottest stretches. That's basically the same reasoning behind the natural electrolytes in every bottle of Soletta today. We didn't add anything special to make that true. It's just what real lemon and sea salt have always given you.</p>",
+        "image": "shopify://shop_images/Seltz-sale-e-limone.jpg",
+        "button_label": "",
+        "button_link": "",
+        "link_label": "",
+        "link_url": ""
+      }
+    },
+    "image_with_text_mjVT83": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GgHxRM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Soletta Today",
+            "heading_size": "h1"
+          }
+        },
+        "text_n4HrtF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We started Soletta because that drink barely exists outside of Sicily. And when you do find something close to it, it's usually cutting a corner somewhere: flavor concentrate standing in for real fruit, or so much sugar that \"refreshing\" isn't really the point anymore. We wanted the actual thing, so we made it ourselves.<br/>Whether you're two hours into a workday that needs a reset, three drinks into a night that needs one more mixer, or standing at a table where the drink matters as much as the company does, it's the same bottle, the same three ingredients, the same idea that's been around since 1896: a good thing doesn't need much help.<br/><br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_fr4wHg": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GgHxRM",
+        "text_n4HrtF",
+        "button_fr4wHg"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_2501_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "soletta_banner_acdgCQ",
+    "image_with_text_nCEXVq",
+    "soletta_hero_xkjCkG",
+    "image_with_text_mjVT83"
   ]
 }
