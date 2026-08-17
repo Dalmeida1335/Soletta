@@ -16,7 +16,7 @@
         "image": "shopify://shop_images/catania-sicily-travel-4900515_ccfdbddb-6c59-45f7-bba0-61901591e817.jpg",
         "overlay_opacity": 90,
         "eyebrow": "",
-        "heading": "Wholesaler Inquires, Customer Questions, or Just want to Chat?",
+        "heading": "Wholesaler Inquiries, Customer Questions, or Just want to Chat?",
         "body": "",
         "button_label": "",
         "button_link": ""
@@ -48,7 +48,7 @@
         "heading": "Capturing the essence of Sicily in a bottle - Soletta.",
         "body": "<p>Subscribe and it arrives before you run out.</p>",
         "button_label": "Start a subscription",
-        "button_link": ""
+        "button_link": "shopify://products/soletta-24-pack-subscription"
       }
     }
   },

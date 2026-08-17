@@ -27,7 +27,7 @@
         "heading": "A RECIPE OLDER THAN THE SODA AISLE",
         "body": "",
         "button_label": "Start a subscription",
-        "button_link": ""
+        "button_link": "shopify://products/soletta-24-pack-subscription"
       }
     },
     "image_with_text_nCEXVq": {
@@ -69,18 +69,52 @@
         "padding_bottom": 36
       }
     },
-    "soletta_hero_xkjCkG": {
-      "type": "soletta-hero",
-      "name": "Soletta hero",
+    "image_with_text_Lqy6MA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pNGQpK": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Ritual then and Now",
+            "heading_size": "h1"
+          }
+        },
+        "text_rJwJNe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The classic version is prepared almost like a small performance. Carbonated water charged fresh from a hermetic siphon, poured over real, locally squeezed lemon juice, then finished with a pinch of salt stirred in with a long cocktail spoon, right there in front of you at the counter. It was usually served in a plain paper cup, meant to be drunk fast, standing up, mid-conversation with whoever poured it.</p><p>Locally, people valued the lemon and salt for more than the taste. The sodium and potassium were considered a natural way to stay refreshed through Sicily's hottest stretches. That's basically the same reasoning behind the natural electrolytes in every bottle of Soletta today. We didn't add anything special to make that true. It's just what real lemon and sea salt have always given you.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_QWVhPF": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pNGQpK",
+        "text_rJwJNe",
+        "button_QWVhPF"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "eyebrow": "",
-        "heading": "The Ritual then and Now",
-        "body": "<p>The classic version is prepared almost like a small performance. Carbonated water charged fresh from a hermetic siphon, poured over real, locally squeezed lemon juice, then finished with a pinch of salt stirred in with a long cocktail spoon, right there in front of you at the counter. It was usually served in a plain paper cup, meant to be drunk fast, standing up, mid-conversation with whoever poured it.</p><p>Locally, people valued the lemon and salt for more than the taste. The sodium and potassium were considered a natural way to stay refreshed through Sicily's hottest stretches. That's basically the same reasoning behind the natural electrolytes in every bottle of Soletta today. We didn't add anything special to make that true. It's just what real lemon and sea salt have always given you.</p>",
         "image": "shopify://shop_images/Seltz-sale-e-limone.jpg",
-        "button_label": "",
-        "button_link": "",
-        "link_label": "",
-        "link_url": ""
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_mjVT83": {
@@ -130,13 +164,26 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "soletta_banner_Q6qaRi": {
+      "type": "soletta-banner",
+      "name": "Soletta banner",
+      "settings": {
+        "overlay_opacity": 45,
+        "eyebrow": "Natural Electrolytes",
+        "heading": "Capturing the essence of Sicily in a bottle - Soletta.",
+        "body": "",
+        "button_label": "Shop",
+        "button_link": "shopify://collections/all"
+      }
     }
   },
   "order": [
     "main",
     "soletta_banner_acdgCQ",
     "image_with_text_nCEXVq",
-    "soletta_hero_xkjCkG",
-    "image_with_text_mjVT83"
+    "image_with_text_Lqy6MA",
+    "image_with_text_mjVT83",
+    "soletta_banner_Q6qaRi"
   ]
 }
