@@ -19,7 +19,7 @@
         "button_label": "Shop Soletta",
         "button_link": "shopify://collections/all",
         "link_label": "Our story",
-        "link_url": ""
+        "link_url": "shopify://pages/our-story"
       }
     },
     "marquee": {
