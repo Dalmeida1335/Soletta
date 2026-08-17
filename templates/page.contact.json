@@ -9,15 +9,15 @@
  */
 {
   "sections": {
-    "soletta_banner_TnJGmw": {
+    "soletta_banner_gkRrHX": {
       "type": "soletta-banner",
       "name": "Soletta banner",
       "settings": {
         "overlay_opacity": 45,
-        "eyebrow": "Get in touch",
-        "heading": "Customer Support, Retail + Wholesale Inquiries, Press + Partnership",
-        "body": "",
-        "button_label": "",
+        "eyebrow": "Natural Electrolytes",
+        "heading": "Salt, lemon, water. It works because it is simple.",
+        "body": "<p>Subscribe and it arrives before you run out.</p>",
+        "button_label": "Start a subscription",
         "button_link": ""
       }
     },
@@ -37,11 +37,24 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "soletta_banner_TYyGdG": {
+      "type": "soletta-banner",
+      "name": "Soletta banner",
+      "settings": {
+        "overlay_opacity": 45,
+        "eyebrow": "Natural Electrolytes",
+        "heading": "Salt, lemon, water. It works because it is simple.",
+        "body": "<p>Subscribe and it arrives before you run out.</p>",
+        "button_label": "Start a subscription",
+        "button_link": ""
+      }
     }
   },
   "order": [
-    "soletta_banner_TnJGmw",
+    "soletta_banner_gkRrHX",
     "main",
-    "form"
+    "form",
+    "soletta_banner_TYyGdG"
   ]
 }

@@ -21,122 +21,112 @@
       "type": "soletta-banner",
       "name": "Soletta banner",
       "settings": {
-        "image": "shopify://shop_images/Catania_Kiosk.webp",
+        "image": "shopify://shop_images/seltz-limone-sale-scaled.jpg",
         "overlay_opacity": 90,
-        "eyebrow": "OUR STORY",
-        "heading": "A RECIPE OLDER THAN THE SODA AISLE",
+        "eyebrow": "frequently asked questions",
+        "heading": "You've got questions, we got answers",
         "body": "",
-        "button_label": "Start a subscription",
-        "button_link": ""
+        "button_label": "Shop",
+        "button_link": "shopify://collections/all"
       }
     },
-    "image_with_text_nCEXVq": {
-      "type": "image-with-text",
+    "soletta_faq_egRyXh": {
+      "type": "soletta-faq",
       "blocks": {
-        "heading_zrne3A": {
-          "type": "heading",
+        "item_UCpFaf": {
+          "type": "item",
           "settings": {
-            "heading": "KIOSKS OF CATANIA",
-            "heading_size": "h1"
+            "question": "Why glass bottles instead of aluminum cans?",
+            "answer": "<p>Most aluminum cans are lined with a polymer coating so that you don't get that metallic aftertaste.  Glass is inert and doesn't react with anything, so it needs no liner and adds no flavor of its own. It also holds carbonation tighter and stays cold longer in your hand.  We wanted to ensure the only the highest of quality for our consumers so they can experience Soletta as if they were in Catania themselves. </p>"
           }
         },
-        "text_nNCnfn": {
-          "type": "text",
+        "item_VbrLQf": {
+          "type": "item",
           "settings": {
-            "text": "<p>Long before sparkling water came in a can with a fruit drawn on it, it came from a kiosk on the Catania waterfront. A simple stand, a bottle of carbonated water, a wedge of lemon, a pinch of sea salt stirred in by hand. It's called<em>seltz limone e sale</em>, and in Sicily it's less a beverage category than a memory. The drink you had after the beach. The one your grandfather ordered without needing to ask. The taste that means summer's officially here.<br/><br/></p>",
-            "text_style": "body"
+            "question": "How much sugar or sodium is in a bottle of Soletta?",
+            "answer": "<p>0g of added sugar, and 55mg of sodium (2% daily value) per 12 fl oz bottle, from the sea salt. Check the label on your case for the full nutrition breakdown.</p>"
+          }
+        },
+        "item_83qqAV": {
+          "type": "item",
+          "settings": {
+            "question": "What is Soletta. exactly?",
+            "answer": "<p>It's a sparkling seltz inspired by<em>seltz limone e sale</em>, carbonated water, lemon juice, and sea salt, served from kiosks in Catania, Sicily since 1896. Not a soda. Not a flavored water. Not really an electrolyte drink in the sports-supplement sense either. It's closer to a very old, very simple recipe than anything new.</p>"
+          }
+        },
+        "item_bJRLwy": {
+          "type": "item",
+          "settings": {
+            "question": "What's actually in it?",
+            "answer": "<p>Clean, simple ingredients: Carbonated water, real organic lemon juice, Sicilian Sea Salt, Lemon Extract and citric acid. </p>"
+          }
+        },
+        "item_wC93yX": {
+          "type": "item",
+          "settings": {
+            "question": "Is there caffeine or alcohol in Soletta?",
+            "answer": "<p>Nope, neither. It makes a great non-alcoholic mixer, but there's no alcohol in the bottle itself.</p>"
           }
         }
       },
       "block_order": [
-        "heading_zrne3A",
-        "text_nNCnfn"
+        "item_UCpFaf",
+        "item_VbrLQf",
+        "item_83qqAV",
+        "item_bJRLwy",
+        "item_wC93yX"
       ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Catania_Kiosk.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "soletta_hero_xkjCkG": {
-      "type": "soletta-hero",
-      "name": "Soletta hero",
+      "name": "Soletta FAQ",
       "settings": {
         "eyebrow": "",
-        "heading": "The Ritual then and Now",
-        "body": "<p>The classic version is prepared almost like a small performance. Carbonated water charged fresh from a hermetic siphon, poured over real, locally squeezed lemon juice, then finished with a pinch of salt stirred in with a long cocktail spoon, right there in front of you at the counter. It was usually served in a plain paper cup, meant to be drunk fast, standing up, mid-conversation with whoever poured it.</p><p>Locally, people valued the lemon and salt for more than the taste. The sodium and potassium were considered a natural way to stay refreshed through Sicily's hottest stretches. That's basically the same reasoning behind the natural electrolytes in every bottle of Soletta today. We didn't add anything special to make that true. It's just what real lemon and sea salt have always given you.</p>",
-        "image": "shopify://shop_images/Seltz-sale-e-limone.jpg",
-        "button_label": "",
-        "button_link": "",
-        "link_label": "",
-        "link_url": ""
+        "heading": "The Drink",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     },
-    "image_with_text_mjVT83": {
-      "type": "image-with-text",
+    "soletta_faq_UxJNiU": {
+      "type": "soletta-faq",
       "blocks": {
-        "heading_GgHxRM": {
-          "type": "heading",
+        "item_FQ4CCU": {
+          "type": "item",
           "settings": {
-            "heading": "Soletta Today",
-            "heading_size": "h1"
+            "question": "Can I skip or cancel a subscription?",
+            "answer": "<p>Yes. Skip a delivery, change how often it arrives, or cancel outright from your account. There is no fee and no phone call.</p>"
           }
         },
-        "text_n4HrtF": {
-          "type": "text",
+        "item_JCXiX4": {
+          "type": "item",
           "settings": {
-            "text": "<p>We started Soletta because that drink barely exists outside of Sicily. And when you do find something close to it, it's usually cutting a corner somewhere: flavor concentrate standing in for real fruit, or so much sugar that \"refreshing\" isn't really the point anymore. We wanted the actual thing, so we made it ourselves.<br/>Whether you're two hours into a workday that needs a reset, three drinks into a night that needs one more mixer, or standing at a table where the drink matters as much as the company does, it's the same bottle, the same three ingredients, the same idea that's been around since 1896: a good thing doesn't need much help.<br/><br/><br/></p>",
-            "text_style": "body"
+            "question": "How does the subscription work?",
+            "answer": "<p>Pick a delivery frequency (every 2, 4, or 6 weeks) and your case ships automatically after that. You can skip an order, change how often it comes, or cancel outright from your account, no need to call anyone.</p>"
           }
         },
-        "button_fr4wHg": {
-          "type": "button",
+        "item_TbqJJP": {
+          "type": "item",
           "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
+            "question": "Can I skip or cancel a subscription?",
+            "answer": "<p>Yes, any time. Skip a delivery, change how often it arrives, or cancel outright from your account. There is no fee and no phone call.</p>"
           }
         }
       },
       "block_order": [
-        "heading_GgHxRM",
-        "text_n4HrtF",
-        "button_fr4wHg"
+        "item_FQ4CCU",
+        "item_JCXiX4",
+        "item_TbqJJP"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "Soletta FAQ",
       "settings": {
-        "image": "shopify://shop_images/IMG_2501_1.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "eyebrow": "",
+        "heading": "Orders and Subscriptions",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     }
   },
   "order": [
     "main",
     "soletta_banner_acdgCQ",
-    "image_with_text_nCEXVq",
-    "soletta_hero_xkjCkG",
-    "image_with_text_mjVT83"
+    "soletta_faq_egRyXh",
+    "soletta_faq_UxJNiU"
   ]
 }
