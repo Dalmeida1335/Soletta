@@ -33,6 +33,20 @@
     "soletta_faq_egRyXh": {
       "type": "soletta-faq",
       "blocks": {
+        "item_83qqAV": {
+          "type": "item",
+          "settings": {
+            "question": "What is Soletta. exactly?",
+            "answer": "<p>It's a sparkling seltz inspired by<em>seltz limone e sale</em>, carbonated water, lemon juice, and sea salt, served from kiosks in Catania, Sicily since 1896. Not a soda. Not a flavored water. Not really an electrolyte drink in the sports-supplement sense either. It's closer to a very old, very simple recipe than anything new.</p>"
+          }
+        },
+        "item_bzeCzH": {
+          "type": "item",
+          "settings": {
+            "question": "Does Soletta need to be refrigerated?",
+            "answer": "<p>For the best taste, we highly recommend that you enjoy cold but it can be stored at room temperature. </p>"
+          }
+        },
         "item_UCpFaf": {
           "type": "item",
           "settings": {
@@ -45,13 +59,6 @@
           "settings": {
             "question": "How much sugar or sodium is in a bottle of Soletta?",
             "answer": "<p>0g of added sugar, and 55mg of sodium (2% daily value) per 12 fl oz bottle, from the sea salt. Check the label on your case for the full nutrition breakdown.</p>"
-          }
-        },
-        "item_83qqAV": {
-          "type": "item",
-          "settings": {
-            "question": "What is Soletta. exactly?",
-            "answer": "<p>It's a sparkling seltz inspired by<em>seltz limone e sale</em>, carbonated water, lemon juice, and sea salt, served from kiosks in Catania, Sicily since 1896. Not a soda. Not a flavored water. Not really an electrolyte drink in the sports-supplement sense either. It's closer to a very old, very simple recipe than anything new.</p>"
           }
         },
         "item_bJRLwy": {
@@ -70,9 +77,10 @@
         }
       },
       "block_order": [
+        "item_83qqAV",
+        "item_bzeCzH",
         "item_UCpFaf",
         "item_VbrLQf",
-        "item_83qqAV",
         "item_bJRLwy",
         "item_wC93yX"
       ],
@@ -87,11 +95,18 @@
     "soletta_faq_UxJNiU": {
       "type": "soletta-faq",
       "blocks": {
+        "item_eaNbQ9": {
+          "type": "item",
+          "settings": {
+            "question": "Can I return an order?",
+            "answer": "<p>Since Soletta is a food product, we can't take back opened cases. But if something about your order isn't right, reach out to info@drinksoletta.com and we'll figure out how to fix it.</p>"
+          }
+        },
         "item_FQ4CCU": {
           "type": "item",
           "settings": {
             "question": "Can I skip or cancel a subscription?",
-            "answer": "<p>Yes. Skip a delivery, change how often it arrives, or cancel outright from your account. There is no fee and no phone call.</p>"
+            "answer": "<p>Yes. Skip a delivery, change how often it arrives, or cancel outright from your account. Just make changes at least 3 days before you next charge if you want them to apply to that upcoming order.</p>"
           }
         },
         "item_JCXiX4": {
@@ -100,19 +115,12 @@
             "question": "How does the subscription work?",
             "answer": "<p>Pick a delivery frequency (every 2, 4, or 6 weeks) and your case ships automatically after that. You can skip an order, change how often it comes, or cancel outright from your account, no need to call anyone.</p>"
           }
-        },
-        "item_TbqJJP": {
-          "type": "item",
-          "settings": {
-            "question": "Can I skip or cancel a subscription?",
-            "answer": "<p>Yes, any time. Skip a delivery, change how often it arrives, or cancel outright from your account. There is no fee and no phone call.</p>"
-          }
         }
       },
       "block_order": [
+        "item_eaNbQ9",
         "item_FQ4CCU",
-        "item_JCXiX4",
-        "item_TbqJJP"
+        "item_JCXiX4"
       ],
       "name": "Soletta FAQ",
       "settings": {
