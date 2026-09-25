@@ -101,7 +101,7 @@
         "onetime": {
           "type": "product",
           "settings": {
-            "product": "soletta-24-pack-subscription",
+            "product": "soletta-24-pack",
             "show_subscription": false,
             "badge": "",
             "body": "<p>Subscribe and Save!</p>",
