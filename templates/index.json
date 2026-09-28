@@ -92,7 +92,7 @@
           "type": "product",
           "settings": {
             "product": "soletta-12-pack",
-            "show_subscription": true,
+            "show_subscription": false,
             "badge": "Best value",
             "body": "",
             "button_label": "Subscribe"
@@ -104,7 +104,7 @@
             "product": "soletta-24-pack",
             "show_subscription": false,
             "badge": "",
-            "body": "<p>Subscribe and Save!</p>",
+            "body": "",
             "button_label": "Add to cart"
           }
         }
